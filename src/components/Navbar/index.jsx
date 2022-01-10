@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowDown, ChevronDown, Search } from "react-feather";
+import { ChevronDown, Search } from "react-feather";
 import styled from "styled-components";
 import { logo } from "../../assets/";
 
