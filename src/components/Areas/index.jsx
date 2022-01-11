@@ -8,7 +8,6 @@ const Container = styled.div`
   align-items: center;
   /* justify-content: ; */
   background: #e7e7e7;
-  margin: 10px 36px;
   min-height: 40px;
 `;
 
