@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 import styled from "styled-components";
 import { Calendar } from "react-feather";
@@ -67,10 +67,14 @@ const Text = styled.div`
 
 const BarPosts = (props) => {
   const [loading, setLoading] = useState([]);
-  axios.get("https://admin.daryo.uz/wp-json/wp/v2/posts").then((res) => {
-    console.log(res.data);
-    setLoading(res.data);
-  });
+  useEffect(() => {
+    axios.get("https://admin.daryo.uz/wp-json/wp/v2/posts").then((res) => {
+      console.log(res.data.slice(0, 5));
+
+      setLoading(res.data.slice(0, 5));
+    });
+  }, []);
+
   return (
     <Container>
       <Heading>So'ngi yangiliklar</Heading>
