@@ -67,12 +67,10 @@ const Text = styled.div`
 
 const BarPosts = (props) => {
   const [loading, setLoading] = useState([]);
-  const result = axios
-    .get("https://admin.daryo.uz/wp-json/wp/v2/posts")
-    .then((res) => {
-      console.log(res.data);
-      setLoading(res.data);
-    });
+  axios.get("https://admin.daryo.uz/wp-json/wp/v2/posts").then((res) => {
+    console.log(res.data);
+    setLoading(res.data);
+  });
   return (
     <Container>
       <Heading>So'ngi yangiliklar</Heading>
