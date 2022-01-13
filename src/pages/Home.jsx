@@ -3,6 +3,7 @@ import Areas from "../components/Areas";
 import Navbar from "../components/Navbar/";
 import Featured from "../components/Sections/Featured/Featured";
 import styled from "styled-components";
+import BarPosts from "../components/Sections/Posts/BarPosts";
 const Container = styled.div`
   padding: 0px 36px;
 `;
@@ -14,6 +15,7 @@ const Left = styled.div`
 `;
 const Right = styled.div`
   flex: 3;
+  padding: 10px;
 `;
 const Home = () => {
   return (
@@ -25,7 +27,9 @@ const Home = () => {
           <Left>
             <Featured />
           </Left>
-          <Right></Right>
+          <Right>
+            <BarPosts>Hello world</BarPosts>
+          </Right>
         </NewsDivider>
       </Container>
     </div>
